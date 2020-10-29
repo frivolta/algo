@@ -1,0 +1,17 @@
+{
+  "name": "algo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsc -w --skipLibCheck",
+    "build": "tsc --skipLibCheck",
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "tsc": "^1.20150623.0",
+    "tsx": "^1.0.0",
+    "typescript": "^4.0.3"
+  }
+}
