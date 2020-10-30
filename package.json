@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsc -w --skipLibCheck",
     "build": "tsc --skipLibCheck",
-    "test": "jest",
+    "test": "jest -w",
     "coverage": "jest --coverage"
   },
   "dependencies": {
