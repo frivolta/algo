@@ -13,7 +13,6 @@ rotate 2 steps to the right: [6,7,1,2,3,4,5]
 rotate 3 steps to the right: [5,6,7,1,2,3,4]
 */
 
-
 // Method 1. ES6 Destructuring. NB: the excercise should return "void", I return the resulted array for the sake of tests
 const getRotations = (nums: number[], k: number) => k > nums.length ? k % nums.length : k
 
@@ -24,4 +23,26 @@ function rotate(nums: number[], k: number): number[] {
 };
 
 
-export {rotate, getRotations}
+// Method 2. Reverse the array
+function rotate_reverse(nums: number[], k: number): number[] {
+  k = k % nums.length;
+  reverse(nums, 0, nums.length-1)
+  reverse(nums, 0, k)
+  reverse(nums, k, nums.length - 1)
+  return nums
+};
+
+function reverse(nums: number[], start: number, end: number): number[]{
+  while (start < end) {
+    const temp = nums[start];
+    nums[start] = nums[end];
+    nums[end] = temp
+    start++;
+    end--;
+  }
+  return nums
+}
+
+
+
+export {rotate, getRotations, reverse, rotate_reverse}
