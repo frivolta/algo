@@ -24,15 +24,14 @@ function rotate(nums: number[], k: number): number[] {
 
 
 // Method 2. Reverse the array
-function rotate_reverse(nums: number[], k: number): number[] {
+function rotate_reverse(nums: number[], k: number) {
   k = k % nums.length;
   reverse(nums, 0, nums.length-1)
-  reverse(nums, 0, k)
+  reverse(nums, 0, k-1)
   reverse(nums, k, nums.length - 1)
-  return nums
 };
 
-function reverse(nums: number[], start: number, end: number): number[]{
+function reverse(nums: number[], start: number, end: number){
   while (start < end) {
     const temp = nums[start];
     nums[start] = nums[end];
@@ -40,9 +39,18 @@ function reverse(nums: number[], start: number, end: number): number[]{
     start++;
     end--;
   }
-  return nums
 }
 
 
 
-export {rotate, getRotations, reverse, rotate_reverse}
+// Method 2. Brute force unshifting for k times
+function rotate_pop(nums:number[],k:number): void{
+  while (k--) {
+    nums.unshift(nums.pop() as number);
+  }
+}
+
+
+
+
+export {rotate, getRotations, reverse, rotate_reverse, rotate_pop}
