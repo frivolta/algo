@@ -1,6 +1,10 @@
+/*
+ * For a detailed explanation regarding each configuration property, visit:
+ * https://jestjs.io/docs/en/configuration.html
+ */
+
 module.exports = {
-  transform: { "^.+\\.ts?$": "ts-jest" },
+  coverageProvider: "v8",
+  testRegex: "/.*\\.(test|spec)?\\.(js|jsx)$",
   testEnvironment: "node",
-  testRegex: "/.*\\.(test|spec)?\\.(ts|tsx)$",
-  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
 };
