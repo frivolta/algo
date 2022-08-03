@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+.container{
+    max-width: 500px;
+    background: red;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+.line{
+    display: flex;
+    gap: 10px;
+}
+.square{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}

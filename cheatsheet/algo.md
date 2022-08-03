@@ -1,0 +1,4 @@
+- quick sort
+- select
+- reverse matrix
+- reverse linked list
